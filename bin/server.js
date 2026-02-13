@@ -18,6 +18,10 @@ server.get('/', (req, reply) => {
 </html>`;
 });
 
+server.get('/healthz', (req, reply) => {
+  return { status: 'ok' };
+});
+
 const PORT = process.env.PORT || 10000;
 const HOST = process.env.HOST || '0.0.0.0';
 
