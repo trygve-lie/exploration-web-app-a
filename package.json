@@ -5,6 +5,7 @@
   "private": true,
   "description": "Example deployment to render.com",
   "scripts": {
+    "build": "echo",
     "start": "node bin/server.js"
   },
   "dependencies": {
