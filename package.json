@@ -1,0 +1,16 @@
+{
+  "name": "exploration-web-app-a",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "Example deployment to render.com",
+  "scripts": {
+    "start": "node bin/server.js"
+  },
+  "dependencies": {
+    "fastify": "5.7.4"
+  },
+  "engines": {
+    "node": "24"
+  }
+}
