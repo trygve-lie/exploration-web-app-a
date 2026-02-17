@@ -18,6 +18,32 @@ server.get('/', (req, reply) => {
 </html>`;
 });
 
+server.get('/jobs', (req, reply) => {
+  reply.type('text/html');
+  return `<!doctype html>
+<html>
+<head>
+  <title>Jobs - Web App A</title>
+</head>
+<body>
+  <h1>Hello from Jobs</h1>
+</body>
+</html>`;
+});
+
+server.get('/mobility', (req, reply) => {
+  reply.type('text/html');
+  return `<!doctype html>
+<html>
+<head>
+  <title>Mobility - Web App A</title>
+</head>
+<body>
+  <h1>Hello from Mobility</h1>
+</body>
+</html>`;
+});
+
 server.get('/healthz', (req, reply) => {
   return { status: 'ok' };
 });
