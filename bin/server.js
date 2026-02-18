@@ -14,7 +14,8 @@ server.get('/', (req, reply) => {
   <title>Web App A</title>
 </head>
 <body>
-  <h1>Hello from Web App A</h1>
+  <div data-component-name="header">Placeholder header</div>
+  <p>Hello hello</p>
 </body>
 </html>`;
 });
