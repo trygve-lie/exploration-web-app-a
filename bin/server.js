@@ -7,6 +7,7 @@ const server = Fastify({
 
 server.get('/', (req, reply) => {
   reply.type('text/html');
+  reply.header('Cache-Control', 'public, max-age=120');
   return `<!doctype html>
 <html>
 <head>
@@ -20,6 +21,7 @@ server.get('/', (req, reply) => {
 
 server.get('/jobs', (req, reply) => {
   reply.type('text/html');
+  reply.header('Cache-Control', 'public, max-age=120');
   return `<!doctype html>
 <html>
 <head>
@@ -33,6 +35,7 @@ server.get('/jobs', (req, reply) => {
 
 server.get('/mobility', (req, reply) => {
   reply.type('text/html');
+  reply.header('Cache-Control', 'public, max-age=120');
   return `<!doctype html>
 <html>
 <head>
@@ -45,7 +48,12 @@ server.get('/mobility', (req, reply) => {
 });
 
 server.get('/healthz', (req, reply) => {
+  reply.header('Cache-Control', 'no-store');
   return { status: 'ok' };
+});
+
+server.setNotFoundHandler((_req, reply) => {
+  reply.status(404).send('Not Found');
 });
 
 const PORT = process.env.PORT || 10000;
