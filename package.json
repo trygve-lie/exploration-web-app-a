@@ -6,7 +6,8 @@
   "description": "Example deployment to render.com",
   "scripts": {
     "build": "echo",
-    "start": "node bin/server.js"
+    "start": "node bin/server.js",
+    "dev": "node --env-file=.env bin/server.js"
   },
   "dependencies": {
     "fastify": "5.7.4"
