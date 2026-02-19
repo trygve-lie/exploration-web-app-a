@@ -11,11 +11,12 @@ server.get('/', (req, reply) => {
   return `<!doctype html>
 <html>
 <head>
-  <title>Web App A</title>
+  <title>Web App</title>
 </head>
 <body>
   <div data-component-name="header">Placeholder header</div>
-  <p>Hello hello</p>
+  <p>Frontpage application</p>
+  <div data-component-name="footer">Placeholder footer</div>
 </body>
 </html>`;
 });
@@ -26,10 +27,12 @@ server.get('/jobs', (req, reply) => {
   return `<!doctype html>
 <html>
 <head>
-  <title>Jobs - Web App A</title>
+  <title>Jobs - Web App</title>
 </head>
 <body>
-  <h1>Hello from Jobs</h1>
+  <div data-component-name="header">Placeholder header</div>
+  <p>Jobs application</p>
+  <div data-component-name="footer">Placeholder footer</div>
 </body>
 </html>`;
 });
@@ -40,10 +43,12 @@ server.get('/mobility', (req, reply) => {
   return `<!doctype html>
 <html>
 <head>
-  <title>Mobility - Web App A</title>
+  <title>Mobility - Web App</title>
 </head>
 <body>
-  <h1>Hello from Mobility</h1>
+  <div data-component-name="header">Placeholder header</div>
+  <p>Mobility application</p>
+  <div data-component-name="footer">Placeholder footer</div>
 </body>
 </html>`;
 });
