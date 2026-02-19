@@ -5,12 +5,22 @@ const server = Fastify({
   logger: true,
 });
 
+server.addHook('onRequest', (req, _reply, done) => {
+  const traceId = req.headers['x-trace-id'];
+  if (traceId) {
+    req.log.info({ traceId }, 'incoming request');
+  }
+  done();
+});
+
 server.get('/', (req, reply) => {
   reply.type('text/html');
   reply.header('Cache-Control', 'public, max-age=120');
   return `<!doctype html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
   <title>Web App</title>
 </head>
 <body>
@@ -27,6 +37,8 @@ server.get('/jobs', (req, reply) => {
   return `<!doctype html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
   <title>Jobs - Web App</title>
 </head>
 <body>
@@ -43,6 +55,8 @@ server.get('/mobility', (req, reply) => {
   return `<!doctype html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
   <title>Mobility - Web App</title>
 </head>
 <body>
