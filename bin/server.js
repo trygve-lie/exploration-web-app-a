@@ -26,6 +26,13 @@ server.get('/', (req, reply) => {
 <body>
   <div data-component-name="header">Placeholder header</div>
   <p>Frontpage application</p>
+  <nav>
+    <ul>
+      <li><a href="/">Frontpage</a></li>
+      <li><a href="/jobs">Jobs</a></li>
+      <li><a href="/mobility">Mobility</a></li>
+    </ul>
+  </nav>
   <div data-component-name="footer">Placeholder footer</div>
 </body>
 </html>`;
@@ -44,6 +51,13 @@ server.get('/jobs', (req, reply) => {
 <body>
   <div data-component-name="header">Placeholder header</div>
   <p>Jobs application</p>
+  <nav>
+    <ul>
+      <li><a href="/">Frontpage</a></li>
+      <li><a href="/jobs">Jobs</a></li>
+      <li><a href="/mobility">Mobility</a></li>
+    </ul>
+  </nav>
   <div data-component-name="footer">Placeholder footer</div>
 </body>
 </html>`;
@@ -62,6 +76,13 @@ server.get('/mobility', (req, reply) => {
 <body>
   <div data-component-name="header">Placeholder header</div>
   <p>Mobility application</p>
+  <nav>
+    <ul>
+      <li><a href="/">Frontpage</a></li>
+      <li><a href="/jobs">Jobs</a></li>
+      <li><a href="/mobility">Mobility</a></li>
+    </ul>
+  </nav>
   <div data-component-name="footer">Placeholder footer</div>
 </body>
 </html>`;
