@@ -15,7 +15,8 @@ server.addHook('onRequest', (req, _reply, done) => {
 
 server.get('/', (req, reply) => {
   reply.type('text/html');
-  reply.header('Cache-Control', 'public, max-age=120');
+  reply.header('Surrogate-Control', 'max-age=600');
+  reply.header('Cache-Control', 'public, max-age=3600');
   return `<!doctype html>
 <html>
 <head>
@@ -40,7 +41,8 @@ server.get('/', (req, reply) => {
 
 server.get('/jobs', (req, reply) => {
   reply.type('text/html');
-  reply.header('Cache-Control', 'public, max-age=120');
+  reply.header('Surrogate-Control', 'max-age=600');
+  reply.header('Cache-Control', 'public, max-age=3600');
   return `<!doctype html>
 <html>
 <head>
@@ -65,7 +67,8 @@ server.get('/jobs', (req, reply) => {
 
 server.get('/mobility', (req, reply) => {
   reply.type('text/html');
-  reply.header('Cache-Control', 'public, max-age=120');
+  reply.header('Surrogate-Control', 'max-age=600');
+  reply.header('Cache-Control', 'public, max-age=3600');
   return `<!doctype html>
 <html>
 <head>
